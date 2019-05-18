@@ -10,7 +10,7 @@ script:
 - yarn run coverage
 
 before_deploy:
-  - yarn build
+  - yarn install
 deploy:
   provider: npm
   email: marin@nodefactory.io
