@@ -13,9 +13,11 @@ before_deploy:
   - yarn install
 deploy:
   provider: npm
+  script: yarn build
   email: marin@nodefactory.io
   api_key:
     secure: AcwlHqseFYShHvBv72M/pQx0X0QTLNR1R3g434+ZPni8CL9C255bk9t3AwRvFYhqGnJfBCrrUPdqDG1c17GBW3kst04j19yCuVLfLjvM4UkjdzgHervb1e0ZnW1sgCTIEa7XbSZ2Enr8ATwf2TCfAQO4MUUm9rbIhnF0FDIOhI+C6+Cc+NQ27qpa/5xVf7SsNBwrRRhrxFuzwIK6B4OmPXiLSYbzazZLDXtttkvZgEvcVe1FxphrH9MD7DOsaA+VHB1lBBM3NNG1oTLW+jslzH1vf8ElEkGsKWzsCfrej0HzF+rqNm7RzAkmyTsBDtR/62CM3gUR+PSlqk0tL6xJYyxQZLEOKNCDlmwkqJLPAAfVjykSmDZbPI9DXSUy97CQ4F/D9D5KQjKUm3Bd2LraO0WGQY9nyXedfwFIZXK8MLF4604q0gs4OaevKsJHJUAvXYCgqPExRgmntSFOlz+HPi7Ei/0DYtLfA7xOSosvLQB4M1fHboPYWVK55okfHxmXZtzCn4sFZ3BaPXUwaNvQg+SConiFlI4sjWIlWaTZzPT18Namazz8gI98ejV+Cbk4uXRPBTTAalxB8+ADJponUtM3dHoPvVU3nbwW6ElmcAGc1Tesc+aTUniWc2S7pJp9nUEQ1PE/EfsBIj3NhrEvkJsL+0Kf5UBjzMIkbukpJho=
+  skip_cleanup: true
   on:
     tags: true
     repo: mpetrunic/bls-js
